@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flask Python Project</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-slate-200 h-screen">
+    <div class="flex h-full justify-center items-center">
+      <div
+        class="bg-slate-100 flex flex-col justify-center items-center rounded-xl gap-4 p-8 w-80"
+      >
+        <h1 class="text-2xl font-semibold">Login</h1>
+        <form
+          action="/api/login"
+          method="post"
+          class="flex flex-col gap-8 items-center w-full"
+        >
+          <div class="w-full flex flex-col gap-4">
+            <div class="flex flex-col gap-2">
+              <div>Email :</div>
+              <input
+                type="text"
+                id="email"
+                name="email"
+                placeholder="Email"
+                required
+                class="p-2 rounded-xl"
+              />
+            </div>
+            <div class="flex flex-col gap-2">
+              <div class="flex justify-between">
+                <div>Password :</div>
+                <a href="{{ url_for('page.login') }}" class="text-blue-700">forget?</a>
+              </div>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Password"
+                required
+                class="p-2 rounded-xl"
+              />
+            </div>
+          </div>
+          <input
+            type="submit"
+            value="Submit"
+            class="flex cursor-pointer justify-center p-2 w-full rounded-xl bg-slate-600 text-slate-200 hover:bg-slate-400 hover:text-black"
+          />
+        </form>
+        <div class="flex gap-2 text-sm">
+          <div class="text-slate-500">Don't Have An Account?</div>
+          <a href="{{ url_for('page.register') }}" class="text-blue-700">Register</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,9 @@
+pydantic
+flask
+flask_cors
+python-dotenv
+bcrypt
+pymongo
+flask[async]
+gunicorn
+pydantic[email]
